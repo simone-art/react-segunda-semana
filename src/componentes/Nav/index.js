@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../../img/RocketChat.png'
 import './style.css'
+import Menu from './Menu'
 
 function Nav() {
     return (
@@ -10,6 +11,7 @@ function Nav() {
             alt='Logotipo do Rocketchat'
             className='navbar-logo'
             />
+            <Menu />
         </nav>
     )
 }
