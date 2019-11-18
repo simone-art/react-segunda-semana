@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .navbar-menu__botao {
     cursor: pointer;
     letter-spacing: 2px;
