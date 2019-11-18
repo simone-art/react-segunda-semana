@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import {Link} from 'react-router-dom';
+
 
 class Menu extends React.Component {
     constructor(props) {
@@ -32,9 +34,21 @@ class Menu extends React.Component {
                 Menu
             </span>
             <ul className={classesDasOpcoes}>
-                <li>Home</li>
-                <li>Contato</li>
-                <li>Mensagens</li>
+                <li>
+                <Link to='/' className='navbar-links__ativo'>
+                Home
+                </Link>
+                </li>
+                <li>
+                <Link to='/contato' className='navbar-links__ativo'>
+                Contato
+                </Link>    
+                </li>
+                <li>
+                <Link to='/chat' className='navbar-links__ativo'>
+                Mensagens
+                </Link>
+               </li>
             </ul>
         </div>
         )
