@@ -48,7 +48,9 @@ class Formulario extends React.Component {
                         name='nome'
                         placeholder='Digite seu nome'
                         mudaEstado={this.handleChange}
+                        minlenght={10}
                         required 
+                        type='text'
                         />
                         </Grupo>
                         <Grupo erro={this.state.email.erro}>
@@ -58,6 +60,7 @@ class Formulario extends React.Component {
                         placeholder='Digite seu email'
                         mudaEstado={this.handleChange}
                         required 
+                        type='email'
                         />
                         </Grupo>
                         <Grupo erro={this.state.pais.erro}>
@@ -67,6 +70,7 @@ class Formulario extends React.Component {
                         placeholder='Digite seu pais'
                         mudaEstado={this.handleChange}
                         required 
+                        type='text'
                         />
                         </Grupo>
                         <Grupo erro={this.state.mensagem.erro}>
@@ -75,6 +79,7 @@ class Formulario extends React.Component {
                         name='mensagem'
                         placeholder='Digite a sua mensagem'
                         mudaEstado={this.handleChange}
+                        type='text'
                         />
                         </Grupo>
                 </form>
