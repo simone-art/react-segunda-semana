@@ -1,32 +1,27 @@
 import React from 'react';
 
-class CaixaTexto extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-        nome: ''
+function CaixaTexto (props) {
+    console.log(props)
+
+    function validaCampo(evento) {
+        if (props.required && evento.target.value.trim()=== ''){
+            props.mudaEstado(evento.target.name, evento.target.value, 'Campo Obrigatório')
+            return
         }
+        props.mudaEstado(evento.target.name, evento.target.value)
     }
-
-
-handleChange = (evento) => {
-    this.setState ({
-        nome: evento.target.value
-    })
-}
-
-render() { 
     return (
         <input
-            className='campo'
-            type='text'
-            name='nome'
-            placeholder='Digite seu nome'
-            onChange={this.handleChange}
-            value={this.state.nome}
+        name={props.name}
+        type='text'
+        className='campo'
+        placeholder={props.placeholder}
+        onChange={validaCampo}
         />
     )
 }
-}
+
+
+
 
 export default CaixaTexto;
