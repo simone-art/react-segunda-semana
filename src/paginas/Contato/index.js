@@ -1,4 +1,5 @@
 import React from 'react'
+import CaixaTexto from './Formulario/CaixaTexto'
 import './style.css'
 
 function Contato (){
