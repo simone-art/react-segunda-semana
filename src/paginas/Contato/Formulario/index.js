@@ -99,9 +99,14 @@ class Formulario extends React.Component {
                         type='text'
                         />
                         </Grupo>
-                        <Botao 
-                        estaDesabilitado={verificaBotao}
-                        />
+                        <Botao
+                        desabilitado={verificaBotao}
+                        mudaConteudo={this.props.mudaConteudo}
+                        pagina='sucesso'
+                        >
+                        Enviar
+                        </Botao>
+                    
                 </form>
             </div>
         )

@@ -19,7 +19,7 @@ function CaixaTexto (props) {
         }
         const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         if(props.type === 'email' && !regex.test({value})){
-            props.mudaEstad(name, value, 'Digite um email válido')
+            props.mudaEstado(name, value, 'Digite um email válido')
         }
         props.mudaEstado(name, value)
     }

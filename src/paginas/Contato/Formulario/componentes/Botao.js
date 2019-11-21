@@ -6,10 +6,14 @@ function Botao (props) {
         classes+= 'botao--desabilitado'
     }
     const handleClick =(evento)=> {
+        evento.preventDefault()
+        props.mudaConteudo(props.pagina)
         console.log(evento)
     }
     return (
-        <button onClick={handleClick} className='classes'> Enviar </button>
+        <button onClick={handleClick} className='classes'>
+            {props.children}
+        </button>
     )
 }
 
