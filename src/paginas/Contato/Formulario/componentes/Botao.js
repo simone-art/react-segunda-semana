@@ -7,11 +7,14 @@ function Botao (props) {
     }
     const handleClick =(evento)=> {
         evento.preventDefault()
+        if(props.type === 'submit') {
+            props.onSubmit()
+        }
         props.mudaConteudo(props.pagina)
         console.log(evento)
     }
     return (
-        <button onClick={handleClick} className='classes'>
+        <button onClick={handleClick} className='classes' type={props.type}>
             {props.children}
         </button>
     )

@@ -9,6 +9,7 @@ function Sucesso (props) {
             <Botao
                 mudaConteudo={props.mudaConteudo}
                 pagina='formulario'
+                type='button'
             >
             Voltar
             </Botao>

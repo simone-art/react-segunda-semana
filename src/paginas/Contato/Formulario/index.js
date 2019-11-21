@@ -49,6 +49,17 @@ class Formulario extends React.Component {
             this.state.mensagem.erro 
 
         )
+    } 
+
+    handleSubmit = () => {
+        const novoContato = {
+            nome: this.state.nome.valor,
+            email: this.state.email.valor,
+            pais: this.state.pais.valor,
+            mensagem: this.state.mensagem.valor
+        }
+
+        // console.log(evento, novoContato, 'enviou')
     }
 
     render() {
@@ -58,7 +69,7 @@ class Formulario extends React.Component {
             // console.log(this.state)
             <div className='pagina'>
                 <h2>Entre en contato conosco</h2>
-                <form className='formulario'>
+                <form className='formulario' id onSubmit={this.handleSubmit}>
                     <Grupo erro={this.state.nome.erro}>
                         <Grupo.Legenda htmlFor='nome'> Nome Completo: </Grupo.Legenda>
                         <Grupo.CaixaTexto 
@@ -102,7 +113,9 @@ class Formulario extends React.Component {
                         <Botao
                         desabilitado={verificaBotao}
                         mudaConteudo={this.props.mudaConteudo}
+                        onSubmit={this.handleSubmit}
                         pagina='sucesso'
+                        type='submit'
                         >
                         Enviar
                         </Botao>
