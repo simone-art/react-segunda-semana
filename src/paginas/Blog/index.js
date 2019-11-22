@@ -33,12 +33,14 @@ class Blog extends React.Component {
             class='blog-header' 
             titulo="Blog"
             />
+            <div className='blog-postagens'>
              {this.state.posts.length > 0
                 ? this.state.posts.map(post => {
                     return <Postagens post={post} key={post.id} />
                 })
                 : <span>Carregando mensagens :</span>
              }
+            </div>
         </main> 
     )
     }

@@ -1,10 +1,11 @@
 import React from 'react'
+import './style.css'
 
 
 function Postagens (props){
     return (
         <section className='blog-postagens'> 
-        <div className='postagens'
+        <div className='postagem'
         >
         <h2>{props.post.title}</h2>
         <p>{props.post.body}</p>
