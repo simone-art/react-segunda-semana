@@ -5,10 +5,9 @@ function Postagens (props){
     return (
         <section className='blog-postagens'> 
         <div className='postagens'
-        titulo='Venezuela'
         >
-        {/* <h2>{props.post.tittle}</h2>
-        <p>{props.post.body}</p> */}
+        <h2>{props.post.title}</h2>
+        <p>{props.post.body}</p>
         <button className='botao'>Saiba Mais </button>
 
         </div>
